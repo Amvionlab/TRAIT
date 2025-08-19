@@ -27,19 +27,19 @@ export default function Header() {
               to={item.path}
               className={({ isActive }) =>
                 `font-medium relative overflow-hidden text-black transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-black after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100
-                ${isActive ? 'after:!bg-[#FFC501] after:!scale-x-100' : ''}`
+                ${isActive ? 'after:!bg-[#FFC501] after:!scale-x-100' : ''}`
               }
             >
               {item.name}
             </NavLink>
           ))}
-          <a
+          <span className='flex items-center'> <a
             href="/get-in-touch"
-            className="flex items-center font-medium transition-colors text-black hover:text-black relative overflow-hidden after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-black after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
+            className="font-medium transition-colors text-black hover:text-black relative overflow-hidden after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-black after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
           >
             Get in touch
-            <span className="ml-2">↗</span>
-          </a>
+
+          </a> <span className="font-normal">↗</span></span>
         </nav>
       </header>
 
@@ -57,24 +57,32 @@ export default function Header() {
 
       {/* Mobile Menu (Pop-up) */}
       {isMenuOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-[#FFC501] text-black p-4 z-50 flex flex-col items-center justify-center animate-slideIn">
-          <button onClick={() => setIsMenuOpen(false)} className="absolute top-4 right-4 text-2xl font-bold">
-            X
+        <div className="fixed top-0 left-0 w-full h-full pt-10 bg-[#FFC501] text-black p-4 z-50 flex flex-col items-center justify-center animate-slideIn">
+          <button onClick={() => setIsMenuOpen(false)} className="absolute top-14 right-4 text-xl font-medium">
+            Close X
           </button>
-          <ul className="flex flex-col items-center space-y-6 text-2xl">
+          <ul className="flex flex-col items-center space-y-6 text-lg font-medium">
             {navItems.map((item) => (
               <li key={item.name}>
-                <a href={item.path} className="text-black" onClick={() => setIsMenuOpen(false)}>
+                <NavLink
+                  to={item.path}
+                  className={({ isActive }) =>
+                    `font-medium relative overflow-hidden text-black transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-black after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100
+                    ${isActive ? 'after:!scale-x-100' : ''}`
+                  }
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   {item.name}
-                </a>
+                </NavLink>
               </li>
             ))}
             <li>
-              <a href="/get-in-touch" className="text-black flex items-center">
+              <a href="/get-in-touch" className="text-black flex items-center font-medium relative overflow-hidden after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-black after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">
                 Get in touch <span className="ml-2">↗</span>
               </a>
             </li>
           </ul>
+          <p className="text-gray-800 text-sm mt-20"><span className='font-bold'>Just Kidding </span>/ Seriously, though</p>
         </div>
       )}
     </>
