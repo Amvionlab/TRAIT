@@ -10,7 +10,7 @@ export default function Background() {
         <img
           src={bgLines}
           alt="Background lines"
-          className="w-full h-full pt-4 pb-4 object-fit"
+          className="w-full h-full py-6 px-4 object-fit"
         />
       </div>
 
