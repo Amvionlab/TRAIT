@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { ArrowUpRight } from "lucide-react"; // <-- add this
 import Logo from './logo.png';
 
 export default function Header() {
@@ -20,26 +21,28 @@ export default function Header() {
           <img src={Logo} alt="Logo" className="w-16 h-16" />
         </div>
 
-        <nav className="flex space-x-10 sm:space-x-12 -mt-8 text-2xl">
+        <nav className="flex space-x-10 sm:space-x-12 -mt-8 text-xl">
           {navItems.map((item) => (
             <NavLink
               key={item.name}
               to={item.path}
               className={({ isActive }) =>
                 `font-medium relative overflow-hidden text-black transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-black after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100
-                ${isActive ? 'after:!bg-[#FFC501] after:!scale-x-100' : ''}`
+                ${isActive ? 'after:!bg-[#FFC501] after:!scale-x-100' : ''}`
               }
             >
               {item.name}
             </NavLink>
           ))}
-          <span className='flex items-center'> <a
-            href="/get-in-touch"
-            className="font-medium transition-colors text-black hover:text-black relative overflow-hidden after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-black after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
-          >
-            Get in touch
-
-          </a> <span className="font-normal">↗</span></span>
+          <span className="flex items-center">
+            <a
+              href="/get-in-touch"
+              className="font-medium transition-colors text-black hover:text-black relative overflow-hidden after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-black after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
+            >
+              Get in touch
+            </a>
+            <ArrowUpRight className="ml-1 w-5 h-5" /> {/* arrow icon */}
+          </span>
         </nav>
       </header>
 
@@ -78,11 +81,11 @@ export default function Header() {
             ))}
             <li>
               <a href="/get-in-touch" className="text-black flex items-center font-medium relative overflow-hidden after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-black after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">
-                Get in touch <span className="ml-2">↗</span>
+                Get in touch <ArrowUpRight className="ml-2 w-5 h-5" />
               </a>
             </li>
           </ul>
-          <p className="text-gray-800 text-sm mt-20"><span className='font-bold'>Just Kidding </span>/ Seriously, though</p>
+          <p className="text-gray-800 text-sm mt-20"><span className="font-bold">Just Kidding </span>/ Seriously, though</p>
         </div>
       )}
     </>
