@@ -3,7 +3,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,jsx,ts,tsx}"
   ],
-  darkMode: true,
+  darkMode: 'class', // Explicitly set to 'class' for dark mode toggling
   theme: {
     extend: {
       keyframes: {
@@ -34,7 +34,7 @@ export default {
         blu: "#004080",
         name: "#B1B1B1",
         flo: "#E33824",
-        prime: "#1e4276", // Correct hex code for blue-950
+        prime: "#1e4276",
         second: "#ebeef5",
         box: "#ffffff",
         label: "#172554",
@@ -43,9 +43,6 @@ export default {
         scolor: "rgba(0, 66, 255, 0.08)",
       }
     }
-    },
-  variants: {
-    extend: {},
   },
   plugins: [],
 }
