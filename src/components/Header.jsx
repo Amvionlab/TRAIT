@@ -36,12 +36,12 @@ export default function Header() {
   return (
     <>
       {/* Desktop Header */}
-      <header className="hidden sm:flex py-6 px-4 sm:px-8 lg:px-12 justify-between items-center text-lg z-20 relative">
-        <div className="flex items-center mt-2 -ml-6">
-          <img src={Logo} alt="Logo" className="w-16 h-16" />
+      <header className="hidden sm:flex py-4 px-4 sm:px-8 lg:px-9 justify-between items-center text-lg z-20 relative">
+        <div className="flex items-center">
+          <img src={Logo} alt="Logo" className="w-14 h-14" />
         </div>
 
-        <nav className="flex space-x-10 sm:space-x-20 -mt-10 text-lg items-center">
+        <nav className="flex space-x-10 sm:space-x-24 -mt-6 text-lg items-center">
           {navItems.map((item) => (
             <NavLink
               key={item.name}
@@ -64,7 +64,7 @@ export default function Header() {
             <ArrowUpRight className="ml-1 w-5 h-5 text-black dark:text-white" />
           </span>
           {/* Theme Toggle Button */}
-          <button
+          {/* <button
             onClick={toggleTheme}
             className="relative w-16 h-8 bg-gray-300 dark:bg-gray-700 rounded-full p-1 flex items-center transition-colors duration-300"
             aria-label="Toggle theme"
@@ -80,7 +80,7 @@ export default function Header() {
                 <Moon className="w-4 h-4 text-gray-300" />
               )}
             </div>
-          </button>
+          </button> */}
         </nav>
       </header>
 
@@ -90,7 +90,7 @@ export default function Header() {
           <img src={Logo} alt="Logo" className="w-10 h-10" />
         </div>
         <div className="flex items-center space-x-4">
-          <button
+          {/* <button
             onClick={toggleTheme}
             className="relative w-12 h-6 bg-gray-300 dark:bg-gray-700 rounded-full p-1 flex items-center transition-colors duration-300"
             aria-label="Toggle theme"
@@ -106,7 +106,7 @@ export default function Header() {
                 <Moon className="w-3 h-3 text-gray-300" />
               )}
             </div>
-          </button>
+          </button> */}
           <button onClick={() => setIsMenuOpen(true)}>
             <svg className="w-8 h-8 text-black dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
