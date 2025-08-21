@@ -106,7 +106,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col items-start">
                   <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">03</span>
-                  <img src={graphic} alt="Graphic Design" className="h-20 w-auto object-contain" />
+                  <img src={graphic} alt="Graphic Design" className="h-[60%] w-auto object-contain" />
                   <p className="mt-2 text-left text-gray-500 dark:text-gray-400">Graphic Design</p>
                 </div>
               </div>
