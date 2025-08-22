@@ -52,25 +52,26 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="-ml-12 grid grid-cols-3  gap-y-7 text-xs font-medium underline">
-                  <a href="#" className="flex items-center space-x-1">
+                <div className="-ml-12 grid grid-cols-3 gap-y-7 text-xs font-medium">
+                  <a href="#" className="flex items-center space-x-3 underline">
                     <span>Instagram</span>
                     <ArrowUpRight size={12} />
                   </a>
-                  <a href="#" className="flex items-center space-x-1">
+                  <a href="#" className="flex items-center space-x-3 underline">
                     <span>LinkedIn</span>
                     <ArrowUpRight size={12} />
                   </a>
                   <a></a>
-                  <a href="#" className="flex items-center space-x-1">
+                  <a href="#" className="flex items-center space-x-3 underline">
                     <span>YouTube</span>
                     <ArrowUpRight size={12} />
                   </a>
-                  <a href="#" className="flex items-center space-x-1">
+                  <a href="#" className="flex items-center space-x-3 underline">
                     <span>Behance</span>
                     <ArrowUpRight size={12} />
                   </a>
                 </div>
+
               </div>
             </div>
 
@@ -82,7 +83,7 @@ export default function Home() {
 
             {/* Big Tagline */}
             <div className="">
-              <h1 className="text-3xl sm:text-4xl -mt-8 font-bold tracking-tight">
+              <h1 className="text-4xl sm:text-[2.5rem] -mt-8 font-bold tracking-tight">
                 Trait Distinguished
               </h1>
             </div>
@@ -118,8 +119,8 @@ export default function Home() {
               <p className="text-base max-w-sm font-raleway">
                 We're a design agency built on  <br />
                 timeless creative ratios. Always open  <br />
-                 to new forms, new ideas, and <br />
-                  the unexpected.
+                to new forms, new ideas, and <br />
+                the unexpected.
               </p>
 
               {/* Footer Numbers + Just Kidding */}
@@ -133,14 +134,14 @@ export default function Home() {
 
                 {/* Clickable Text Row */}
                 <div className="text-sm font-medium mt-1">
-                  <button 
-                    onClick={() => setTheme('light')} 
+                  <button
+                    onClick={() => setTheme('light')}
                     className="font-bold dark:text-white"
                   >
                     Just Kidding
                   </button>
-                  <button 
-                    onClick={() => setTheme('dark')} 
+                  <button
+                    onClick={() => setTheme('dark')}
                     className="text-gray-400  ml-1"
                   >
                     / Seriously, though

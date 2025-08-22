@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import graphic from 'C:/xampp/htdocs/TRAIT/src/components/graphic.svg';
-import uiux from 'C:/xampp/htdocs/TRAIT/src/components/uiux.svg';
-import td from 'C:/xampp/htdocs/TRAIT/src/components/3d.svg';
+import td from '../components/3d.svg'
+import graphic from '../components/graphic.svg'
+import uiux from '../components/uiux.svg'
 import { ArrowUpRight } from "lucide-react";
 
 export default function About() {
