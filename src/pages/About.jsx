@@ -1,20 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import graphic from '../components/graphic.svg';
-import uiux from '../components/uiux.svg';
-import td from '../components/3d.svg';
+import graphic from 'C:/xampp/htdocs/TRAIT/src/components/graphic.svg';
+import uiux from 'C:/xampp/htdocs/TRAIT/src/components/uiux.svg';
+import td from 'C:/xampp/htdocs/TRAIT/src/components/3d.svg';
 import { ArrowUpRight } from "lucide-react";
 
 export default function About() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
-  const members = [
-    { id: "01", name: "Raj Francis", role: "Founder", img: graphic },
-    { id: "02", name: "Suraj Dhanuki", role: "Co-Founder", img: uiux },
-    { id: "03", name: "Anjana Ashok", role: "Business Development", img: td },
-    { id: "04", name: "Prabhakaran", role: "UI/UX Designer", img: graphic },
-    { id: "05", name: "Jiolas Paul", role: "Graphic Designer", img: uiux },
-    { id: "06", name: "Chiranjeevi", role: "3D Designer", img: td },
-  ];
+
   useEffect(() => {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
@@ -37,30 +30,56 @@ export default function About() {
             {/* Team Section */}
             <div className="-ml-2 mt-1">
               <h2 className="text-sm font-bold mb-4 font-poppins">The minds behind it all</h2>
-              <div className="grid grid-cols-2 gap-x-12 gap-y-8 max-w-6xl mx-auto">
-      {members.map((m) => (
-        <div
-          key={m.id}
-          className="grid grid-cols-[40px_120px_1fr] items-center gap-4"
-        >
-          {/* Number */}
-          <span className="text-xs text-gray-500 dark:text-gray-400">{m.id}</span>
-
-          {/* Image */}
-          <img
-            src={m.img}
-            alt={m.name}
-            className="h-20 w-20 object-cover rounded-md"
-          />
-
-          {/* Text */}
-          <div>
-            <p className="font-semibold">{m.name}</p>
-            <p className="text-sm text-gray-500 dark:text-gray-400">{m.role}</p>
-          </div>
-        </div>
-      ))}
-    </div>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="flex items-center space-x-4">
+                  <span className="text-xs text-gray-500 dark:text-gray-400 w-6 text-right">01</span>
+                  <img src={graphic} alt="Raj Francis" className="h-24 w-24 object-cover rounded" />
+                  <div className="text-left">
+                    <p className="font-medium text-sm">Raj Francis</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">Founder</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <span className="text-xs text-gray-500 dark:text-gray-400 w-6 text-right">02</span>
+                  <img src={uiux} alt="Suraj Dhanuki" className="h-24 w-24 object-cover rounded" />
+                  <div className="text-left">
+                    <p className="font-medium text-sm">Suraj Dhanuki</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">Co-Founder</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <span className="text-xs text-gray-500 dark:text-gray-400 w-6 text-right">03</span>
+                  <img src={td} alt="Anjana Ashok" className="h-24 w-24 object-cover rounded" />
+                  <div className="text-left">
+                    <p className="font-medium text-sm">Anjana Ashok</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">Business Development</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <span className="text-xs text-gray-500 dark:text-gray-400 w-6 text-right">04</span>
+                  <img src={graphic} alt="Prabhakaran" className="h-24 w-24 object-cover rounded" />
+                  <div className="text-left">
+                    <p className="font-medium text-sm">Prabhakaran</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">UI/UX Designer</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <span className="text-xs text-gray-500 dark:text-gray-400 w-6 text-right">05</span>
+                  <img src={uiux} alt="Jiolas Paul" className="h-24 w-24 object-cover rounded" />
+                  <div className="text-left">
+                    <p className="font-medium text-sm">Jiolas Paul</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">Graphic Designer</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <span className="text-xs text-gray-500 dark:text-gray-400 w-6 text-right">06</span>
+                  <img src={td} alt="Chiranjeevi" className="h-24 w-24 object-cover rounded" />
+                  <div className="text-left">
+                    <p className="font-medium text-sm">Chiranjeevi</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">3D Designer</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
