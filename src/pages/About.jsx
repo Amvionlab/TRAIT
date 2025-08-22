@@ -7,7 +7,14 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function About() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
-
+  const members = [
+    { id: "01", name: "Raj Francis", role: "Founder", img: graphic },
+    { id: "02", name: "Suraj Dhanuki", role: "Co-Founder", img: uiux },
+    { id: "03", name: "Anjana Ashok", role: "Business Development", img: td },
+    { id: "04", name: "Prabhakaran", role: "UI/UX Designer", img: graphic },
+    { id: "05", name: "Jiolas Paul", role: "Graphic Designer", img: uiux },
+    { id: "06", name: "Chiranjeevi", role: "3D Designer", img: td },
+  ];
   useEffect(() => {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
@@ -30,44 +37,30 @@ export default function About() {
             {/* Team Section */}
             <div className="-ml-2 mt-1">
               <h2 className="text-sm font-bold mb-4 font-poppins">The minds behind it all</h2>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="flex flex-col items-start">
-                  <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">01</span>
-                  <img src={graphic} alt="Raj Francis" className="h-[40%] w-auto object-contain" />
-                  <p className="mt-2 text-left font-medium">Raj Francis</p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Founder</p>
-                </div>
-                <div className="flex flex-col items-start">
-                  <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">02</span>
-                  <img src={uiux} alt="Suraj Dhanuki" className="h-[40%] w-auto object-contain" />
-                  <p className="mt-2 text-left font-medium">Suraj Dhanuki</p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Co-Founder</p>
-                </div>
-                <div className="flex flex-col items-start">
-                  <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">03</span>
-                  <img src={td} alt="Anjana Ashok" className="h-[40%] w-auto object-contain" />
-                  <p className="mt-2 text-left font-medium">Anjana Ashok</p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Business Development</p>
-                </div>
-                <div className="flex flex-col items-start">
-                  <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">04</span>
-                  <img src={graphic} alt="Prabhakaran" className="h-[40%] w-auto object-contain" />
-                  <p className="mt-2 text-left font-medium">Prabhakaran</p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">UI/UX Designer</p>
-                </div>
-                <div className="flex flex-col items-start">
-                  <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">05</span>
-                  <img src={uiux} alt="Jiolas Paul" className="h-[40%] w-auto object-contain" />
-                  <p className="mt-2 text-left font-medium">Jiolas Paul</p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Graphic Designer</p>
-                </div>
-                <div className="flex flex-col items-start">
-                  <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">06</span>
-                  <img src={td} alt="Chiranjeevi" className="h-[40%] w-auto object-contain" />
-                  <p className="mt-2 text-left font-medium">Chiranjeevi</p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">3D Designer</p>
-                </div>
-              </div>
+              <div className="grid grid-cols-2 gap-x-12 gap-y-8 max-w-6xl mx-auto">
+      {members.map((m) => (
+        <div
+          key={m.id}
+          className="grid grid-cols-[40px_120px_1fr] items-center gap-4"
+        >
+          {/* Number */}
+          <span className="text-xs text-gray-500 dark:text-gray-400">{m.id}</span>
+
+          {/* Image */}
+          <img
+            src={m.img}
+            alt={m.name}
+            className="h-20 w-20 object-cover rounded-md"
+          />
+
+          {/* Text */}
+          <div>
+            <p className="font-semibold">{m.name}</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">{m.role}</p>
+          </div>
+        </div>
+      ))}
+    </div>
             </div>
           </div>
 
