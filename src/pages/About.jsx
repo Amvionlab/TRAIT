@@ -34,46 +34,40 @@ export default function About() {
                 <div className="flex flex-col items-start">
                   <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">01</span>
                   <img src={graphic} alt="Raj Francis" className="h-[60%] w-auto object-contain" />
-                  <p className="mt-2 text-left text-gray-500 dark:text-gray-400">Raj Francis</p>
+                  <p className="mt-2 text-left font-medium">Raj Francis</p>
                   <p className="text-xs text-gray-500 dark:text-gray-400">Founder</p>
                 </div>
                 <div className="flex flex-col items-start">
                   <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">02</span>
                   <img src={uiux} alt="Suraj Dhanuki" className="h-[60%] w-auto object-contain" />
-                  <p className="mt-2 text-left text-gray-500 dark:text-gray-400">Suraj Dhanuki</p>
+                  <p className="mt-2 text-left font-medium">Suraj Dhanuki</p>
                   <p className="text-xs text-gray-500 dark:text-gray-400">Co-Founder</p>
                 </div>
                 <div className="flex flex-col items-start">
                   <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">03</span>
                   <img src={td} alt="Anjana Ashok" className="h-[60%] w-auto object-contain" />
-                  <p className="mt-2 text-left text-gray-500 dark:text-gray-400">Anjana Ashok</p>
+                  <p className="mt-2 text-left font-medium">Anjana Ashok</p>
                   <p className="text-xs text-gray-500 dark:text-gray-400">Business Development</p>
                 </div>
                 <div className="flex flex-col items-start">
                   <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">04</span>
                   <img src={graphic} alt="Prabhakaran" className="h-[60%] w-auto object-contain" />
-                  <p className="mt-2 text-left text-gray-500 dark:text-gray-400">Prabhakaran</p>
+                  <p className="mt-2 text-left font-medium">Prabhakaran</p>
                   <p className="text-xs text-gray-500 dark:text-gray-400">UI/UX Designer</p>
                 </div>
                 <div className="flex flex-col items-start">
                   <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">05</span>
                   <img src={uiux} alt="Jiolas Paul" className="h-[60%] w-auto object-contain" />
-                  <p className="mt-2 text-left text-gray-500 dark:text-gray-400">Jiolas Paul</p>
+                  <p className="mt-2 text-left font-medium">Jiolas Paul</p>
                   <p className="text-xs text-gray-500 dark:text-gray-400">Graphic Designer</p>
                 </div>
                 <div className="flex flex-col items-start">
                   <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">06</span>
                   <img src={td} alt="Chiranjeevi" className="h-[60%] w-auto object-contain" />
-                  <p className="mt-2 text-left text-gray-500 dark:text-gray-400">Chiranjeevi</p>
+                  <p className="mt-2 text-left font-medium">Chiranjeevi</p>
                   <p className="text-xs text-gray-500 dark:text-gray-400">3D Designer</p>
                 </div>
               </div>
-            </div>
-
-            {/* Footer Section */}
-            <div className="flex justify-between text-[10px] text-gray-500 dark:text-gray-400 max-w-xs -ml-2">
-              <span>2021</span>
-              <span>Dot the i's and Cross the t's</span>
             </div>
           </div>
 
@@ -81,19 +75,37 @@ export default function About() {
           <div className="space-y-12 ml-[55%] pl-6 sm:ml-0 sm:absolute sm:top-0 sm:right-0 w-full sm:w-[45%]">
             {/* Agency Description */}
             <div>
-              <p className="text-base max-w-sm font-raleway">
+              <p className="text-base max-w-sm font-raleway leading-relaxed">
                 We're a creative agency focused on design, development, and content creation to elevate your brand.
               </p>
             </div>
 
-            {/* Clients Section */}
-            <div>
-              <h2 className="text-sm font-bold mb-4 font-poppins">Clients</h2>
-              <div className="flex space-x-4">
-                <span className="text-red-500">EXPERIENCES</span>
-                <span className="text-green-500">Tuborg</span>
-                <span className="text-orange-500">DNA Networks</span>
+            {/* Clients Section with Scrolling Animation */}
+            <div className="overflow-hidden">
+              <style>{`
+                @keyframes marquee {
+                  0% {
+                    transform: translateX(0);
+                  }
+                  100% {
+                    transform: translateX(-50%);
+                  }
+                }
+              `}</style>
+              <div className="flex animate-[marquee_20s_linear_infinite] whitespace-nowrap text-sm font-bold">
+                <span className="mx-4 text-red-500">EXPERIENCES</span>
+                <span className="mx-4 text-green-500">TUBORG</span>
+                <span className="mx-4 text-orange-500">DNA NETWORKS</span>
+                <span className="mx-4 text-red-500">EXPERIENCES</span>
+                <span className="mx-4 text-green-500">TUBORG</span>
+                <span className="mx-4 text-orange-500">DNA NETWORKS</span>
               </div>
+            </div>
+
+            {/* Footer Section */}
+            <div className="flex justify-between text-[10px] text-gray-500 dark:text-gray-400">
+              <span>2021</span>
+              <span>Dot the i's and Cross the t's</span>
             </div>
 
             {/* Big Tagline */}
@@ -104,8 +116,9 @@ export default function About() {
             </div>
 
             {/* Who We Are Section */}
-            <div className="pt-9 space-y-8">
-              <p className="text-base max-w-sm font-raleway">
+            <div className="grid grid-cols-[auto_1fr] gap-4 items-start">
+              <h2 className="text-sm font-bold font-poppins">who we are</h2>
+              <p className="text-base max-w-sm font-raleway leading-relaxed">
                 We're a Bangalore-based creative agency crafting digital solutions. Blending strategy, and design, we help businesses grow through results.
               </p>
             </div>
