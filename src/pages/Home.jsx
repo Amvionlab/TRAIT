@@ -29,7 +29,7 @@ export default function Home() {
 
             {/* All Services Section */}
             <div className="-ml-2 mt-1">
-              <h2 className="text-sm font-bold mb-4 font-poppins">All Services</h2>
+              <h2 className="text-[1.5vw] font-bold mb-4 font-poppins">All Services</h2>
               <p className="text-xs mb-4 text-gray-500 dark:text-gray-400">(06)</p>
               <ul className="text-left max-w-md space-y-1 font-medium">
                 <li className="text-xs">3D Design</li>
@@ -88,7 +88,7 @@ export default function Home() {
           </div>
 
           {/* Right Column */}
-          <div className="space-y-12 ml-[55%] pl-6 sm:ml-0 sm:absolute sm:top-0 sm:right-0 w-full sm:w-[45%]">
+          <div className="space-y-12  pl-6 sm:ml-0 sm:absolute sm:top-0 sm:right-0 w-full sm:w-[45%]">
 
             {/* Featured Services Section */}
             <div>
