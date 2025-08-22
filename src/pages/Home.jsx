@@ -21,15 +21,15 @@ export default function Home() {
   }, [theme]);
 
   return (
-    <div className="text-black dark:text-white flex flex-col items-start justify-start px-3">
+    <div className="text-black dark:text-white flex flex-col items-start justify-start px-6">
       <div className="container -mt-6">
         <div className="grid grid-cols-1 sm:grid-cols-[55%_45%] relative">
           {/* Left Column */}
           <div className="space-y-12">
 
             {/* All Services Section */}
-            <div className="-ml-2 mt-1">
-              <h2 className="text-[1.5vw] font-bold mb-4 font-poppins">All Services</h2>
+            <div className=" mt-1">
+              <h2 className="text-sm font-bold mb-4 font-poppins">All Services</h2>
               <p className="text-xs mb-4 text-gray-500 dark:text-gray-400">(06)</p>
               <ul className="text-left max-w-md space-y-1 font-medium">
                 <li className="text-xs">3D Design</li>
@@ -43,7 +43,7 @@ export default function Home() {
 
             {/* Join Us Section */}
             <div className="pt-6">
-              <div className="grid grid-cols-3 gap-6 items-start">
+              <div className="grid grid-cols-3 items-start">
                 <div>
                   <p className="text-sm font-raleway max-w-xs leading-relaxed">
                     Join us at the <br />
@@ -52,7 +52,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-x-8 gap-y-7 text-xs font-medium underline">
+                <div className="-ml-12 grid grid-cols-3  gap-y-7 text-xs font-medium underline">
                   <a href="#" className="flex items-center space-x-1">
                     <span>Instagram</span>
                     <ArrowUpRight size={12} />
@@ -61,6 +61,7 @@ export default function Home() {
                     <span>LinkedIn</span>
                     <ArrowUpRight size={12} />
                   </a>
+                  <a></a>
                   <a href="#" className="flex items-center space-x-1">
                     <span>YouTube</span>
                     <ArrowUpRight size={12} />
@@ -74,53 +75,56 @@ export default function Home() {
             </div>
 
             {/* Footer Section */}
-            <div className="flex justify-between text-[10px] text-gray-500 dark:text-gray-400 max-w-xs -ml-2">
+            <div className="flex justify-between text-xs pt-12 text-gray-500 dark:text-gray-400 max-w-xs">
               <span>2021</span>
               <span>Dot the i's and Cross the t's</span>
             </div>
 
             {/* Big Tagline */}
-            <div className="-ml-2">
-              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
+            <div className="">
+              <h1 className="text-3xl sm:text-4xl -mt-8 font-bold tracking-tight">
                 Trait Distinguished
               </h1>
             </div>
           </div>
 
           {/* Right Column */}
-          <div className="space-y-12  pl-6 sm:ml-0 sm:absolute sm:top-0 sm:right-0 w-full sm:w-[45%]">
+          <div className="space-y-12  pl-6 sm:ml-0 sm:absolute sm:top-0 sm:right-0 w-full sm:w-[42%]">
 
             {/* Featured Services Section */}
             <div>
               <h2 className="text-sm font-bold mb-4 font-poppins">Featured Services</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-3 max-w-4xl text-xs">
+              <div className="grid grid-cols-1 sm:grid-cols-4 max-w-4xl text-xs">
                 <div className="flex flex-col items-start">
                   <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">01</span>
-                  <img src={td} alt="3D Design" className="h-[60%] w-auto object-contain" />
+                  <img src={td} alt="3D Design" className="h-[50%] w-auto object-contain" />
                   <p className="mt-2 text-left text-gray-500 dark:text-gray-400">3D Design</p>
                 </div>
                 <div className="flex flex-col items-start">
                   <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">02</span>
-                  <img src={uiux} alt="UI/UX Design" className="h-[60%] w-auto object-contain" />
+                  <img src={uiux} alt="UI/UX Design" className="h-[50%] w-auto object-contain" />
                   <p className="mt-2 text-left text-gray-500 dark:text-gray-400">UI/UX Design</p>
                 </div>
                 <div className="flex flex-col items-start">
                   <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">03</span>
-                  <img src={graphic} alt="Graphic Design" className="h-[60%] w-auto object-contain" />
+                  <img src={graphic} alt="Graphic Design" className="h-[50%] w-auto object-contain" />
                   <p className="mt-2 text-left text-gray-500 dark:text-gray-400">Graphic Design</p>
                 </div>
               </div>
             </div>
 
             {/* Agency Description Section */}
-            <div className="pt-9 space-y-8">
+            <div className="pt-4 space-y-6">
               <p className="text-base max-w-sm font-raleway">
-                We're a design agency built on timeless creative ratios. Always open to new forms, new ideas, and the unexpected.
+                We're a design agency built on  <br />
+                timeless creative ratios. Always open  <br />
+                 to new forms, new ideas, and <br />
+                  the unexpected.
               </p>
 
               {/* Footer Numbers + Just Kidding */}
-              <div className="max-w-full text-[10px] text-gray-500 dark:text-gray-400">
-                <div className="grid grid-cols-4">
+              <div className="max-w-full text-xs text-gray-500 dark:text-gray-400">
+                <div className="grid grid-cols-4 mb-8 pt-11">
                   <div className="text-left">28</div>
                   <div className="text-left">31</div>
                   <div></div>
@@ -128,7 +132,7 @@ export default function Home() {
                 </div>
 
                 {/* Clickable Text Row */}
-                <div className="text-[11px] font-medium mt-1">
+                <div className="text-sm font-medium mt-1">
                   <button 
                     onClick={() => setTheme('light')} 
                     className="font-bold dark:text-white"

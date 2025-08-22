@@ -36,7 +36,7 @@ export default function Header() {
   return (
     <>
       {/* Desktop Header */}
-      <header className="hidden sm:flex py-4 px-4 sm:px-8 lg:px-9 justify-between items-center text-lg z-20 relative">
+      <header className="hidden sm:flex py-4 px-6 sm:px-8 lg:px-12 justify-between items-center text-lg z-20 relative">
         <div className="flex items-center">
           <img src={Logo} alt="Logo" className="w-14 h-14" />
         </div>
