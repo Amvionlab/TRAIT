@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import graphic from 'C:/xampp/htdocs/TRAIT/src/components/graphic.svg';
-import uiux from 'C:/xampp/htdocs/TRAIT/src/components/uiux.svg';
-import td from 'C:/xampp/htdocs/TRAIT/src/components/3d.svg';
+import graphic from '../components/graphic.svg';
+import uiux from '../components/uiux.svg';
+import td from '../components/3d.svg';
 import { ArrowUpRight } from "lucide-react";
 
 export default function About() {
@@ -33,37 +33,37 @@ export default function About() {
               <div className="grid grid-cols-2 gap-6">
                 <div className="flex flex-col items-start">
                   <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">01</span>
-                  <img src={graphic} alt="Raj Francis" className="h-[60%] w-auto object-contain" />
+                  <img src={graphic} alt="Raj Francis" className="h-[40%] w-auto object-contain" />
                   <p className="mt-2 text-left font-medium">Raj Francis</p>
                   <p className="text-xs text-gray-500 dark:text-gray-400">Founder</p>
                 </div>
                 <div className="flex flex-col items-start">
                   <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">02</span>
-                  <img src={uiux} alt="Suraj Dhanuki" className="h-[60%] w-auto object-contain" />
+                  <img src={uiux} alt="Suraj Dhanuki" className="h-[40%] w-auto object-contain" />
                   <p className="mt-2 text-left font-medium">Suraj Dhanuki</p>
                   <p className="text-xs text-gray-500 dark:text-gray-400">Co-Founder</p>
                 </div>
                 <div className="flex flex-col items-start">
                   <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">03</span>
-                  <img src={td} alt="Anjana Ashok" className="h-[60%] w-auto object-contain" />
+                  <img src={td} alt="Anjana Ashok" className="h-[40%] w-auto object-contain" />
                   <p className="mt-2 text-left font-medium">Anjana Ashok</p>
                   <p className="text-xs text-gray-500 dark:text-gray-400">Business Development</p>
                 </div>
                 <div className="flex flex-col items-start">
                   <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">04</span>
-                  <img src={graphic} alt="Prabhakaran" className="h-[60%] w-auto object-contain" />
+                  <img src={graphic} alt="Prabhakaran" className="h-[40%] w-auto object-contain" />
                   <p className="mt-2 text-left font-medium">Prabhakaran</p>
                   <p className="text-xs text-gray-500 dark:text-gray-400">UI/UX Designer</p>
                 </div>
                 <div className="flex flex-col items-start">
                   <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">05</span>
-                  <img src={uiux} alt="Jiolas Paul" className="h-[60%] w-auto object-contain" />
+                  <img src={uiux} alt="Jiolas Paul" className="h-[40%] w-auto object-contain" />
                   <p className="mt-2 text-left font-medium">Jiolas Paul</p>
                   <p className="text-xs text-gray-500 dark:text-gray-400">Graphic Designer</p>
                 </div>
                 <div className="flex flex-col items-start">
                   <span className="text-xs mb-4 text-gray-500 dark:text-gray-400">06</span>
-                  <img src={td} alt="Chiranjeevi" className="h-[60%] w-auto object-contain" />
+                  <img src={td} alt="Chiranjeevi" className="h-[40%] w-auto object-contain" />
                   <p className="mt-2 text-left font-medium">Chiranjeevi</p>
                   <p className="text-xs text-gray-500 dark:text-gray-400">3D Designer</p>
                 </div>
