@@ -3,3 +3,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Uxum Light';
+    src: url('/fonts/uxumlight.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'Uxum Light', sans-serif;
+  }
+  
+  .grayscale {
+    filter: grayscale(100%);
+  }

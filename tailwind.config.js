@@ -25,7 +25,8 @@ export default {
         poppins: ["Poppins", "sans-serif"],
         mont: ["Montserrat", "sans-serif"],
         raleway: ["Raleway", "sans-serif"],
-        sui: ["system-ui", "sans-serif"]
+        sui: ["system-ui", "sans-serif"],
+        uxum: ['Uxum', 'sans-serif'],
       },
       colors: {
         glass: "rgba(240, 245, 255, 0.7)",
