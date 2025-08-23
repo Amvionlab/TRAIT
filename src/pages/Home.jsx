@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import td from '../components/3d.svg'
-import graphic from '../components/graphic.svg'
-import uiux from '../components/uiux.svg'
+import td from '../components/3D Design.png'
+import graphic from '../components/Graphic Design.png'
+import uiux from '../components/UI UX Design.png'
 import { ArrowUpRight } from "lucide-react";
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
           <div className="space-y-12">
 
             {/* All Services Section */}
-            <div className=" mt-1">
+            <div className=" mt-6">
               <h2 className="text-sm font-bold mb-4 font-poppins">All Services</h2>
               <p className="text-xs mb-4 text-gray-500 dark:text-gray-400">(06)</p>
               <ul className="text-left max-w-md space-y-1 font-medium">
@@ -90,7 +90,7 @@ export default function Home() {
           </div>
 
           {/* Right Column */}
-          <div className="space-y-12  pl-6 sm:ml-0 sm:absolute sm:top-0 sm:right-0 w-full sm:w-[42%]">
+          <div className="space-y-12 mt-6 pl-6 sm:ml-0 sm:absolute sm:top-0 sm:right-0 w-full sm:w-[42%]">
 
             {/* Featured Services Section */}
             <div>

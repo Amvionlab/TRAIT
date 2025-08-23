@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import td from '../components/3d.svg'
-import graphic from '../components/graphic.svg'
-import uiux from '../components/uiux.svg'
+import { Link } from 'react-router-dom';import td from '../components/3D Design.png'
+import graphic from '../components/Graphic Design.png'
+import uiux from '../components/UI UX Design.png'
 import { ArrowUpRight } from "lucide-react";
 
 export default function About() {
