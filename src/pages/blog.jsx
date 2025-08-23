@@ -499,7 +499,7 @@ export default function Home() {
 
 
 return (
-  <div className="flex justify-center p-4">
+  <div >
     <div className="grid grid-cols-1 md:grid-cols-12 gap-12 max-w-7xl w-full">
       {/* Left Column: Main Article Content */}
       <div className="md:col-span-7 md:h-[80vh] md:sticky md:top-0 flex flex-col pl-2 pr-8">
@@ -532,27 +532,29 @@ return (
       >
         {articles.map((article) => (
           <div
-            key={article.id}
-            className="grid grid-cols-[10%_40%_45%] items-start gap-2 cursor-pointer"
-            onClick={() => setActiveArticle(article)}
-          >
-            {/* Number (aligned to top) */}
-            <div className="text-xs text-gray-500 self-start">{`0${article.id}`}</div>
-
-            {/* Image (takes natural height of cell) */}
-            <div className="relative w-full">
-              <img
-                src={article.image}
-                alt={article.title}
-                className={`w-full h-auto object-cover ${
-                  activeArticle.id === article.id ? '' : 'grayscale'
-                }`}
-              />
-            </div>
-
-            {/* Title (aligned to bottom) */}
-            <p className="text-xs text-gray-700 self-end">{article.title}</p>
+          key={article.id}
+          className="grid grid-cols-[10%_90%] items-start gap-2 cursor-pointer"
+          onClick={() => setActiveArticle(article)}
+        >
+          {/* Number */}
+          <div className="text-xs text-gray-500 self-start">{`0${article.id}`}</div>
+        
+          {/* Image + Title overlay */}
+          <div className="relative w-full">
+            <img
+              src={article.image}
+              alt={article.title}
+              className={`w-[40%] object-cover ${
+                activeArticle.id === article.id ? '' : 'grayscale'
+              }`}
+            />
+            {/* Title at bottom-right of image */}
+            <p className="absolute w-[60%] bottom-0 right-0 text-xs text-gray-700 bg-white/70 px-2 py-1">
+              {article.title}
+            </p>
           </div>
+        </div>
+        
         ))}
       </div>
     </div>
