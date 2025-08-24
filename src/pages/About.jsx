@@ -1,8 +1,14 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';import td from '../components/3D Design.png'
-import graphic from '../components/Graphic Design.png'
-import uiux from '../components/UI UX Design.png'
+import { Link } from 'react-router-dom';
 import { ArrowUpRight } from "lucide-react";
+
+// Team member images
+import p1 from '../components/3D Design.png'; // Replace with actual paths
+import p2 from '../components/3D Design.png';
+import p3 from '../components/3D Design.png';
+import p4 from '../components/3D Design.png';
+import p5 from '../components/3D Design.png';
+import p6 from '../components/3D Design.png';
 
 export default function About() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
@@ -20,120 +26,98 @@ export default function About() {
     localStorage.setItem('theme', theme);
   }, [theme]);
 
+  // Team members data
+  const teamMembers = [
+    { id: 1, name: 'Raj Francis', role: 'Founder', image: p1 },
+    { id: 2, name: 'Suraj Dhanuki', role: 'Co-Founder', image: p2 },
+    { id: 3, name: 'Anjana Ashok', role: 'Business Development', image: p3 },
+    { id: 4, name: 'Prabhakaran', role: 'UI/UX Designer', image: p4 },
+    { id: 5, name: 'Jiolas Paul', role: 'Graphic Designer', image: p5 },
+    { id: 6, name: 'Chiranjeevi', role: '3D Designer', image: p6 },
+  ];
+
   return (
-    <div className="text-black dark:text-white flex flex-col items-start justify-start px-3">
-      <div className="container -mt-6">
-        <div className="grid grid-cols-1 sm:grid-cols-[55%_45%] relative">
-          {/* Left Column */}
-          <div className="space-y-12">
-            {/* Team Section */}
-            <div className="-ml-2 mt-1">
-              <h2 className="text-sm font-bold mb-4 font-poppins">The minds behind it all</h2>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="flex items-center space-x-4">
-                  <span className="text-xs text-gray-500 dark:text-gray-400 w-6 text-right">01</span>
-                  <img src={graphic} alt="Raj Francis" className="h-24 w-24 object-cover rounded" />
-                  <div className="text-left">
-                    <p className="font-medium text-sm">Raj Francis</p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">Founder</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <span className="text-xs text-gray-500 dark:text-gray-400 w-6 text-right">02</span>
-                  <img src={uiux} alt="Suraj Dhanuki" className="h-24 w-24 object-cover rounded" />
-                  <div className="text-left">
-                    <p className="font-medium text-sm">Suraj Dhanuki</p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">Co-Founder</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <span className="text-xs text-gray-500 dark:text-gray-400 w-6 text-right">03</span>
-                  <img src={td} alt="Anjana Ashok" className="h-24 w-24 object-cover rounded" />
-                  <div className="text-left">
-                    <p className="font-medium text-sm">Anjana Ashok</p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">Business Development</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <span className="text-xs text-gray-500 dark:text-gray-400 w-6 text-right">04</span>
-                  <img src={graphic} alt="Prabhakaran" className="h-24 w-24 object-cover rounded" />
-                  <div className="text-left">
-                    <p className="font-medium text-sm">Prabhakaran</p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">UI/UX Designer</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <span className="text-xs text-gray-500 dark:text-gray-400 w-6 text-right">05</span>
-                  <img src={uiux} alt="Jiolas Paul" className="h-24 w-24 object-cover rounded" />
-                  <div className="text-left">
-                    <p className="font-medium text-sm">Jiolas Paul</p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">Graphic Designer</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <span className="text-xs text-gray-500 dark:text-gray-400 w-6 text-right">06</span>
-                  <img src={td} alt="Chiranjeevi" className="h-24 w-24 object-cover rounded" />
-                  <div className="text-left">
-                    <p className="font-medium text-sm">Chiranjeevi</p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">3D Designer</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <div className="text-black dark:text-white px-5 py-4">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 md:gap-x-16">
+        
+        <div className="relative md:col-span-7">
+          <h2 className="text-sm font-bold mb-[10%] font-poppins">The minds behind it all</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2  gap-y-16 pt-[1%]">
+  {teamMembers.map((member) => (
+    <div
+      key={member.id}
+      className="grid grid-cols-[10px_90%] items-start gap-2 "
+    >
+      {/* Number */}
+      <div className="text-xs text-gray-500 dark:text-gray-400 self-start">
+        {String(member.id).padStart(2, '0')}
+      </div>
+
+      {/* Image + Name/Role overlay */}
+      <div className="relative w-full">
+        <img
+          src={member.image}
+          alt={member.name}
+          className="w-[30%] object-cover"
+        />
+        <div className="absolute bottom-0 right-0 bg-white/70 px-2 py-1 w-[70%]">
+          <p className="font-medium text-sm">{member.name}</p>
+          <p className="text-xs text-gray-500 dark:text-gray-400">{member.role}</p>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
+        </div>
+
+        {/* Right Column (Company Info & Marquee) */}
+        <div className="flex md:col-span-5 flex-col space-y-[10%] ">
+          
+          {/* Top Section */}
+          <div>
+            <p className="text-base leading-relaxed">
+              We're a creative agency focused on design, development, and content creation to elevate your brand.
+            </p>
           </div>
 
-          {/* Right Column */}
-          <div className="space-y-12 ml-[55%] pl-6 sm:ml-0 sm:absolute sm:top-0 sm:right-0 w-full sm:w-[45%]">
-            {/* Agency Description */}
-            <div>
-              <p className="text-base max-w-sm font-raleway leading-relaxed">
-                We're a creative agency focused on design, development, and content creation to elevate your brand.
-              </p>
+          <div className="overflow-hidden pt-[6%]">
+            <style>{`
+              @keyframes marquee {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+              }
+            `}</style>
+            <div className="flex animate-[marquee_20s_linear_infinite] whitespace-nowrap text-sm font-bold">
+              <span className="mx-4 text-red-500">EXPERIENCES</span>
+              <span className="mx-4 text-green-500">TUBORG</span>
+              <span className="mx-4 text-orange-500">DNA NETWORKS</span>
+              <span className="mx-4 text-red-500">EXPERIENCES</span>
+              <span className="mx-4 text-green-500">TUBORG</span>
+              <span className="mx-4 text-orange-500">DNA NETWORKS</span>
             </div>
+          </div>
+          
 
-            {/* Clients Section with Scrolling Animation */}
-            <div className="overflow-hidden">
-              <style>{`
-                @keyframes marquee {
-                  0% {
-                    transform: translateX(0);
-                  }
-                  100% {
-                    transform: translateX(-50%);
-                  }
-                }
-              `}</style>
-              <div className="flex animate-[marquee_20s_linear_infinite] whitespace-nowrap text-sm font-bold">
-                <span className="mx-4 text-red-500">EXPERIENCES</span>
-                <span className="mx-4 text-green-500">TUBORG</span>
-                <span className="mx-4 text-orange-500">DNA NETWORKS</span>
-                <span className="mx-4 text-red-500">EXPERIENCES</span>
-                <span className="mx-4 text-green-500">TUBORG</span>
-                <span className="mx-4 text-orange-500">DNA NETWORKS</span>
-              </div>
-            </div>
-
-            {/* Footer Section */}
+          {/* Big Tagline and Footer Text */}
+          <div className="flex flex-col space-y-4 pt-[15%]">
             <div className="flex justify-between text-[10px] text-gray-500 dark:text-gray-400">
               <span>2021</span>
               <span>Dot the i's and Cross the t's</span>
             </div>
-
-            {/* Big Tagline */}
-            <div>
-              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
-                Trait Distinguished
-              </h1>
-            </div>
-
-            {/* Who We Are Section */}
-            <div className="grid grid-cols-[auto_1fr] gap-4 items-start">
-              <h2 className="text-sm font-bold font-poppins">who we are</h2>
-              <p className="text-base max-w-sm font-raleway leading-relaxed">
-                We're a Bangalore-based creative agency crafting digital solutions. Blending strategy, and design, we help businesses grow through results.
-              </p>
-            </div>
+            <h1 className="text-3xl sm:text-5xl font-bold tracking-tight">
+              Trait Distinguished
+            </h1>
           </div>
+
+          {/* "Who We Are" Section */}
+          <div className="grid grid-cols-[auto_1fr] gap-4 items-start pt-[6%]">
+            <h2 className="text-sm font-bold font-poppins">who we are</h2>
+            <p className="text-base max-w-sm font-raleway leading-relaxed">
+              We're a Bangalore-based creative agency crafting digital solutions. Blending strategy, and design, we help businesses grow through results.
+            </p>
+          </div>
+
         </div>
       </div>
     </div>

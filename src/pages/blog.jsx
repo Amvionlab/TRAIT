@@ -500,7 +500,7 @@ export default function Home() {
 
 return (
   <div >
-    <div className="grid grid-cols-1 md:grid-cols-12 gap-12 max-w-7xl w-full">
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pt-1  w-full pl-4">
       {/* Left Column: Main Article Content */}
       <div className="md:col-span-7 md:h-[80vh] md:sticky md:top-0 flex flex-col pl-2 pr-8">
         {/* Fixed header + title */}
@@ -527,7 +527,7 @@ return (
 
       {/* Right Column: Image Grid */}
       <div
-        className="md:col-span-5 grid grid-cols-2 gap-x-12 gap-y-4 md:h-[80vh] md:overflow-y-auto md:sticky md:top-0"
+        className="md:col-span-5 grid grid-cols-2 gap-x-6 pt-1 gap-y-4 md:h-[80vh] md:overflow-y-auto md:sticky md:top-0"
         style={scrollbarHideStyle}
       >
         {articles.map((article) => (
