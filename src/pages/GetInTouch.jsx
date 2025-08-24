@@ -138,23 +138,30 @@ export default function GetInTouch() {
               </div>
 
               {/* Submit Button */}
-              <div className="flex items-center space-x-4 pt-8">
-                <div className="w-14 h-14">
-                  <img src={Highfive} alt="Submit" className="w-full h-full rounded-lg object-cover" />
-                </div>
-                <button
-                  onClick={handleSubmit}
-                  className="px-12 py-3 border border-black rounded-lg text-lg hover:bg-black hover:text-white transition-colors"
-                >
-                  Send
-                </button>
-              </div>
+<div className="flex items-center justify-end space-x-4 pt-8 mr-40">
+  <div className="w-14 h-14">
+    <img
+      src={Highfive}
+      alt="Submit"
+      className="w-full h-full rounded-lg object-cover"
+    />
+  </div>
+  <button
+    onClick={handleSubmit}
+    className="px-12 py-3 border border-black rounded-lg text-lg hover:bg-black hover:text-white transition-colors"
+  >
+    Send
+  </button>
+</div>
 
-              {submitted && (
-                <p className="text-gray-600 mt-4">
-                  Consider it done – Heisenberg style. Will reach you shortly.
-                </p>
-              )}
+{submitted && (
+  <p className="text-gray-600 mt-4">
+    Consider it done – Heisenberg style. Will reach you shortly.
+  </p>
+)}
+
+
+
             </div>
           </div>
 
