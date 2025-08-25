@@ -60,7 +60,7 @@ export default function About() {
           alt={member.name}
           className="w-[30%] object-cover"
         />
-        <div className="absolute bottom-0 right-0 bg-white/70 px-2 py-1 w-[70%]">
+        <div className="absolute bottom-0 right-0 px-2 py-1 w-[70%]">
           <p className="font-medium text-sm">{member.name}</p>
           <p className="text-xs text-gray-500 dark:text-gray-400">{member.role}</p>
         </div>
